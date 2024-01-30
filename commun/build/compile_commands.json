@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/export/tmp/4205_34/ele4205_projet_aut2023_34/commun/build",
-  "command": "/bin/c++   -g -o CMakeFiles/Message.dir/message.cpp.o -c /export/tmp/4205_34/ele4205_projet_aut2023_34/commun/message.cpp",
-  "file": "/export/tmp/4205_34/ele4205_projet_aut2023_34/commun/message.cpp",
-  "output": "CMakeFiles/Message.dir/message.cpp.o"
-}
-]
