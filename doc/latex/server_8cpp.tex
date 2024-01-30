@@ -1,0 +1,52 @@
+\hypertarget{server_8cpp}{\section{serveur/server.cpp File Reference}
+\label{server_8cpp}\index{serveur/server.\-cpp@{serveur/server.\-cpp}}
+}
+
+
+Fichier gérant l'utilisation des fonctions, macros et variables dans les fichiers du dossier {\bfseries serveur} .  
+
+
+{\ttfamily \#include \char`\"{}../commun/video.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}server\-Handlers.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}odroid.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{server_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Fonction gérant le programme du côté serveur. Elle initialise les variables, établi et gère une connexion T\-C\-P avec le client, contrôler la caméra et les captures d'images. Elle lit également les signaux provenant des composantes reliées à l'Odroid-\/\-C2 et indique le statut de l'exécution du programme. Elle effectue ces opérations jusqu'à la fin du pogramme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fichier gérant l'utilisation des fonctions, macros et variables dans les fichiers du dossier {\bfseries serveur} . Fichier gérant les fonctions définies dans les dossiers {\bfseries serveur} et {\bfseries commun} selon les demandes de capture d'image reçues. Les demandes proviennent du client qui décide à partir de son disque des paramètres de capture d'image que le serveur va utiliser. Le serveur gère la réception des demandes, le contrôle de la caméra, les captures d'images et l'envoi de celles-\/ci au client.\-Les paramètres de communication avec le client sont également définis dans ce fichier 
+
+Definition in file \hyperlink{server_8cpp_source}{server.\-cpp}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{server_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{\index{server.\-cpp@{server.\-cpp}!main@{main}}
+\index{main@{main}!server.cpp@{server.\-cpp}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}}\label{server_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+
+
+Fonction gérant le programme du côté serveur. Elle initialise les variables, établi et gère une connexion T\-C\-P avec le client, contrôler la caméra et les captures d'images. Elle lit également les signaux provenant des composantes reliées à l'Odroid-\/\-C2 et indique le statut de l'exécution du programme. Elle effectue ces opérations jusqu'à la fin du pogramme. 
+
+\hyperlink{server_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main(int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})} 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Nombre d'arguments de commande. \\
+\hline
+{\em argv} & Tableau d'arguments de commande. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Valeur de retour indiquant le statut de l'exécution du programme. 
+\end{DoxyReturn}
+
+
+Definition at line 30 of file server.\-cpp.
+

@@ -1,0 +1,85 @@
+\hypertarget{odroid_8h}{\section{serveur/odroid.h File Reference}
+\label{odroid_8h}\index{serveur/odroid.\-h@{serveur/odroid.\-h}}
+}
+
+
+Fichier déclarant une fonction et définissant une classe pour contrôler le bouton et la photodiode reliés à l'Odroid-\/\-C2.  
+
+
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classOdroid}{Odroid}
+\begin{DoxyCompactList}\small\item\em Description de la classe gérant les interactions entre la photodiode, le bouton et l'Odroid-\/\-C2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{odroid_8h_a4150a25fd5791b22e2b287fb29bcf023}{read\-\_\-file} (string path)
+\begin{DoxyCompactList}\small\item\em Lit une valeur entière provenant des fichiers spécifiés. \end{DoxyCompactList}\item 
+void \hyperlink{odroid_8h_a6361cdf45c3bb4af4494fd0a91b97bf0}{write\-\_\-file} (string path, int int\-\_\-value, string string\-\_\-value, bool num\-\_\-value)
+\begin{DoxyCompactList}\small\item\em Écrit une valeur entière ou une chaîne de caractères dans le fichier spécifié. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fichier déclarant une fonction et définissant une classe pour contrôler le bouton et la photodiode reliés à l'Odroid-\/\-C2. Ce fichier définit la classe {\bfseries \hyperlink{classOdroid}{Odroid}} qui permet au serveur de recevoir toutes les informations provenant de la photodiode et du bouton pour déterminer si la prise de photo doit être effectuée. Les fonctions utilisées pour enregistrer ces informations sont décrites dans ce fichier. 
+
+Definition in file \hyperlink{odroid_8h_source}{odroid.\-h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{odroid_8h_a4150a25fd5791b22e2b287fb29bcf023}{\index{odroid.\-h@{odroid.\-h}!read\-\_\-file@{read\-\_\-file}}
+\index{read\-\_\-file@{read\-\_\-file}!odroid.h@{odroid.\-h}}
+\subsubsection[{read\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}int read\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{string}]{path}
+\end{DoxyParamCaption}
+)}}\label{odroid_8h_a4150a25fd5791b22e2b287fb29bcf023}
+
+
+Lit une valeur entière provenant des fichiers spécifiés. 
+
+read\-\_\-file 
+\begin{DoxyParams}{Parameters}
+{\em path} & Chemin du fichier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+La valeur entière qui est lue par la fonction est retournée. 
+\end{DoxyReturn}
+
+
+Definition at line 61 of file odroid.\-cpp.
+
+\hypertarget{odroid_8h_a6361cdf45c3bb4af4494fd0a91b97bf0}{\index{odroid.\-h@{odroid.\-h}!write\-\_\-file@{write\-\_\-file}}
+\index{write\-\_\-file@{write\-\_\-file}!odroid.h@{odroid.\-h}}
+\subsubsection[{write\-\_\-file}]{\setlength{\rightskip}{0pt plus 5cm}void write\-\_\-file (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{int}]{int\-\_\-value, }
+\item[{string}]{string\-\_\-value, }
+\item[{bool}]{num\-\_\-value}
+\end{DoxyParamCaption}
+)}}\label{odroid_8h_a6361cdf45c3bb4af4494fd0a91b97bf0}
+
+
+Écrit une valeur entière ou une chaîne de caractères dans le fichier spécifié. 
+
+write\-\_\-file 
+\begin{DoxyParams}{Parameters}
+{\em path} & Chemin du fichier. \\
+\hline
+{\em int\-\_\-value} & Valeur entière à écrire (utilisée si {\itshape num\-\_\-value} est vrai). \\
+\hline
+{\em string\-\_\-value} & Valeur du {\itshape string} à écrire (utilisée si {\itshape num\-\_\-value} est faux). \\
+\hline
+{\em num\-\_\-value} & Flag indiquant s'il faut écrire une valeur entière ou une chaîne de caractères. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 84 of file odroid.\-cpp.
+

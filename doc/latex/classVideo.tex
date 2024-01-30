@@ -1,0 +1,191 @@
+\hypertarget{classVideo}{\section{Video Class Reference}
+\label{classVideo}\index{Video@{Video}}
+}
+
+
+Classe gérant les paramètres de la caméra.  
+
+
+
+
+{\ttfamily \#include $<$video.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classVideo_ad7b4d2253436139ce5c0393f376a0ada}{Video} (int \hyperlink{classVideo_ad2d7366bb2fe431b8551b2df2543ba8a}{Port\-\_\-\-I\-D\-\_\-cam}=0, int \hyperlink{classVideo_a1cd495d4d34fb5ce52237457508dbf40}{video\-\_\-duration}=5, string \hyperlink{classVideo_adf86ca32c0e37e971fcfa66a18c090f0}{I\-D\-\_\-\-U\-S\-B\-\_\-cam}=\char`\"{}046d\-:0825\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \hyperlink{classVideo}{Video}. \end{DoxyCompactList}\item 
+Video\-Capture \hyperlink{classVideo_a127eb238f6a6a89d42a2882cc4bca40d}{get\-Capture} ()
+\begin{DoxyCompactList}\small\item\em Obtient l'objet de capture vidéo. \end{DoxyCompactList}\item 
+void \hyperlink{classVideo_a6c36f89de4bf88cc1d3fa810347babe5}{set\-Res} (int choice)
+\begin{DoxyCompactList}\small\item\em Définit la résolution de la vidéo. \end{DoxyCompactList}\item 
+void \hyperlink{classVideo_aecabd917bdfafcbe4dbe4db79484c67c}{save\-Video} ()
+\begin{DoxyCompactList}\small\item\em Enregistre une vidéo capturée à partir de la caméra. \end{DoxyCompactList}\item 
+\hyperlink{classVideo_aebf7e2a8fa2bbd79335b1cf35925d190}{$\sim$\-Video} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe \hyperlink{classVideo}{Video}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{structResolution}{Resolution} \hyperlink{classVideo_a9bb278cf235b00f875d9c86f049c94b1}{res}
+\item 
+cv\-::\-Video\-Capture \hyperlink{classVideo_abddf81d2414af19fa220148be4bad0f8}{capture}
+\item 
+int \hyperlink{classVideo_a1cd495d4d34fb5ce52237457508dbf40}{video\-\_\-duration}
+\item 
+int \hyperlink{classVideo_ad2d7366bb2fe431b8551b2df2543ba8a}{Port\-\_\-\-I\-D\-\_\-cam}
+\item 
+std\-::string \hyperlink{classVideo_adf86ca32c0e37e971fcfa66a18c090f0}{I\-D\-\_\-\-U\-S\-B\-\_\-cam}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe gérant les paramètres de la caméra. 
+
+Cette classe permet d'identifier la caméra par connection U\-S\-B ainsi que contrôler la durée, la résolution et la sauvegarde d'une vidéo. 
+
+Definition at line 49 of file video.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classVideo_ad7b4d2253436139ce5c0393f376a0ada}{\index{Video@{Video}!Video@{Video}}
+\index{Video@{Video}!Video@{Video}}
+\subsubsection[{Video}]{\setlength{\rightskip}{0pt plus 5cm}Video\-::\-Video (
+\begin{DoxyParamCaption}
+\item[{int}]{Port\-\_\-\-I\-D\-\_\-cam = {\ttfamily 0}, }
+\item[{int}]{video\-\_\-duration = {\ttfamily 5}, }
+\item[{string}]{I\-D\-\_\-\-U\-S\-B\-\_\-cam = {\ttfamily \char`\"{}046d\-:0825\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classVideo_ad7b4d2253436139ce5c0393f376a0ada}
+
+
+Constructeur de la classe \hyperlink{classVideo}{Video}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Port\-\_\-\-I\-D\-\_\-cam} & Identifiant du port de la caméra. \\
+\hline
+{\em video\-\_\-duration} & Durée de la vidéo en secondes. \\
+\hline
+{\em I\-D\-\_\-\-U\-S\-B\-\_\-cam} & Identifiant U\-S\-B de la caméra. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file video.\-cpp.
+
+\hypertarget{classVideo_aebf7e2a8fa2bbd79335b1cf35925d190}{\index{Video@{Video}!$\sim$\-Video@{$\sim$\-Video}}
+\index{$\sim$\-Video@{$\sim$\-Video}!Video@{Video}}
+\subsubsection[{$\sim$\-Video}]{\setlength{\rightskip}{0pt plus 5cm}Video\-::$\sim$\-Video (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classVideo_aebf7e2a8fa2bbd79335b1cf35925d190}
+
+
+Destructeur de la classe \hyperlink{classVideo}{Video}. 
+
+\-::$\sim$\-Video 
+
+Definition at line 53 of file video.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classVideo_a127eb238f6a6a89d42a2882cc4bca40d}{\index{Video@{Video}!get\-Capture@{get\-Capture}}
+\index{get\-Capture@{get\-Capture}!Video@{Video}}
+\subsubsection[{get\-Capture}]{\setlength{\rightskip}{0pt plus 5cm}Video\-Capture Video\-::get\-Capture (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classVideo_a127eb238f6a6a89d42a2882cc4bca40d}
+
+
+Obtient l'objet de capture vidéo. 
+
+\hyperlink{classVideo_a127eb238f6a6a89d42a2882cc4bca40d}{Video\-::get\-Capture} \begin{DoxyReturn}{Returns}
+L'objet de capture vidéo. 
+\end{DoxyReturn}
+
+
+Definition at line 63 of file video.\-cpp.
+
+\hypertarget{classVideo_aecabd917bdfafcbe4dbe4db79484c67c}{\index{Video@{Video}!save\-Video@{save\-Video}}
+\index{save\-Video@{save\-Video}!Video@{Video}}
+\subsubsection[{save\-Video}]{\setlength{\rightskip}{0pt plus 5cm}void Video\-::save\-Video (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classVideo_aecabd917bdfafcbe4dbe4db79484c67c}
+
+
+Enregistre une vidéo capturée à partir de la caméra. 
+
+\hyperlink{classVideo_aecabd917bdfafcbe4dbe4db79484c67c}{Video\-::save\-Video} 
+
+Definition at line 86 of file video.\-cpp.
+
+\hypertarget{classVideo_a6c36f89de4bf88cc1d3fa810347babe5}{\index{Video@{Video}!set\-Res@{set\-Res}}
+\index{set\-Res@{set\-Res}!Video@{Video}}
+\subsubsection[{set\-Res}]{\setlength{\rightskip}{0pt plus 5cm}void Video\-::set\-Res (
+\begin{DoxyParamCaption}
+\item[{int}]{choice}
+\end{DoxyParamCaption}
+)}}\label{classVideo_a6c36f89de4bf88cc1d3fa810347babe5}
+
+
+Définit la résolution de la vidéo. 
+
+\hyperlink{classVideo_a6c36f89de4bf88cc1d3fa810347babe5}{Video\-::set\-Res} 
+\begin{DoxyParams}{Parameters}
+{\em choice} & Indice de la résolution dans le tableau resolutions. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 73 of file video.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classVideo_abddf81d2414af19fa220148be4bad0f8}{\index{Video@{Video}!capture@{capture}}
+\index{capture@{capture}!Video@{Video}}
+\subsubsection[{capture}]{\setlength{\rightskip}{0pt plus 5cm}cv\-::\-Video\-Capture Video\-::capture\hspace{0.3cm}{\ttfamily [private]}}}\label{classVideo_abddf81d2414af19fa220148be4bad0f8}
+Objet de capture vidéo. 
+
+Definition at line 54 of file video.\-h.
+
+\hypertarget{classVideo_adf86ca32c0e37e971fcfa66a18c090f0}{\index{Video@{Video}!I\-D\-\_\-\-U\-S\-B\-\_\-cam@{I\-D\-\_\-\-U\-S\-B\-\_\-cam}}
+\index{I\-D\-\_\-\-U\-S\-B\-\_\-cam@{I\-D\-\_\-\-U\-S\-B\-\_\-cam}!Video@{Video}}
+\subsubsection[{I\-D\-\_\-\-U\-S\-B\-\_\-cam}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Video\-::\-I\-D\-\_\-\-U\-S\-B\-\_\-cam\hspace{0.3cm}{\ttfamily [private]}}}\label{classVideo_adf86ca32c0e37e971fcfa66a18c090f0}
+Identifiant U\-S\-B de la caméra. 
+
+Definition at line 57 of file video.\-h.
+
+\hypertarget{classVideo_ad2d7366bb2fe431b8551b2df2543ba8a}{\index{Video@{Video}!Port\-\_\-\-I\-D\-\_\-cam@{Port\-\_\-\-I\-D\-\_\-cam}}
+\index{Port\-\_\-\-I\-D\-\_\-cam@{Port\-\_\-\-I\-D\-\_\-cam}!Video@{Video}}
+\subsubsection[{Port\-\_\-\-I\-D\-\_\-cam}]{\setlength{\rightskip}{0pt plus 5cm}int Video\-::\-Port\-\_\-\-I\-D\-\_\-cam\hspace{0.3cm}{\ttfamily [private]}}}\label{classVideo_ad2d7366bb2fe431b8551b2df2543ba8a}
+Identifiant du port de la caméra. 
+
+Definition at line 56 of file video.\-h.
+
+\hypertarget{classVideo_a9bb278cf235b00f875d9c86f049c94b1}{\index{Video@{Video}!res@{res}}
+\index{res@{res}!Video@{Video}}
+\subsubsection[{res}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Resolution} Video\-::res\hspace{0.3cm}{\ttfamily [private]}}}\label{classVideo_a9bb278cf235b00f875d9c86f049c94b1}
+Résolution de la vidéo. 
+
+Definition at line 53 of file video.\-h.
+
+\hypertarget{classVideo_a1cd495d4d34fb5ce52237457508dbf40}{\index{Video@{Video}!video\-\_\-duration@{video\-\_\-duration}}
+\index{video\-\_\-duration@{video\-\_\-duration}!Video@{Video}}
+\subsubsection[{video\-\_\-duration}]{\setlength{\rightskip}{0pt plus 5cm}int Video\-::video\-\_\-duration\hspace{0.3cm}{\ttfamily [private]}}}\label{classVideo_a1cd495d4d34fb5ce52237457508dbf40}
+Durée de la vidéo en secondes. 
+
+Definition at line 55 of file video.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+commun/\hyperlink{video_8h}{video.\-h}\item 
+commun/\hyperlink{video_8cpp}{video.\-cpp}\end{DoxyCompactItemize}

@@ -1,1 +1,14 @@
-doc/
+# Ignore VSCode settings
+.vscode/
+client/.vscode/
+commun/.vscode/
+serveur/.vscode/
+
+# Ignore compiled object files
+*.o
+
+# Ignore build output directories
+/build/
+client/build/
+commun/build/
+serveur/build/

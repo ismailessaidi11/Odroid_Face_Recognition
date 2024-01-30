@@ -1,0 +1,201 @@
+\hypertarget{classOdroid}{\section{Odroid Class Reference}
+\label{classOdroid}\index{Odroid@{Odroid}}
+}
+
+
+Description de la classe gérant les interactions entre la photodiode, le bouton et l'Odroid-\/\-C2.  
+
+
+
+
+{\ttfamily \#include $<$odroid.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classOdroid_af78c1d11b6bc3e0a9b206e9f90787bf6}{Odroid} (string \hyperlink{classOdroid_a93391450090b2f8676e261bb6f8ac961}{adc\-\_\-path}=\char`\"{}/sys/class/saradc/ch0\char`\"{}, string \hyperlink{classOdroid_af5c8c0acd24f1d38ae2181a4d659ecd8}{button\-\_\-path}=\char`\"{}/sys/class/gpio/gpio228/value\char`\"{}, string \hyperlink{classOdroid_af59f177765cdc44dd1bca01f1d2e568c}{gpio\-Path}=\char`\"{}/sys/class/gpio/export\char`\"{}, string \hyperlink{classOdroid_aa74658114a7f7d6d31dba4b7e7955674}{direction\-Path}=\char`\"{}/sys/class/gpio/gpio228/\hyperlink{classOdroid_acb053e5e5f9060d7884abf6dd6c29358}{direction}\char`\"{}, int \hyperlink{classOdroid_a936074d84ad18c34e19ee1f1ea59fcbf}{gpio\-\_\-nb}=228, string \hyperlink{classOdroid_acb053e5e5f9060d7884abf6dd6c29358}{direction}=\char`\"{}in\char`\"{})
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \hyperlink{classOdroid}{Odroid}. \end{DoxyCompactList}\item 
+void \hyperlink{classOdroid_afda2e858ec376bd9f0b29fdb7f0f9bb7}{set\-\_\-button} ()
+\begin{DoxyCompactList}\small\item\em Défini l'état du bouton. \end{DoxyCompactList}\item 
+bool \hyperlink{classOdroid_a13964668cb1c0d36ffaaeca6a819a83e}{no\-\_\-light} ()
+\item 
+bool \hyperlink{classOdroid_aa2c13144f4a17627be568b53d8589c58}{button\-\_\-pressed} ()
+\begin{DoxyCompactList}\small\item\em Vérifie si le bouton est pressé (état du bouton est 0). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classOdroid_aeb57a9bb759c9c45cd5fb5a90ea75a0a}{adc\-\_\-value}
+\item 
+string \hyperlink{classOdroid_a93391450090b2f8676e261bb6f8ac961}{adc\-\_\-path}
+\item 
+int \hyperlink{classOdroid_a9d14734cc57d1a962b7b214f84376727}{button\-\_\-value}
+\item 
+string \hyperlink{classOdroid_af5c8c0acd24f1d38ae2181a4d659ecd8}{button\-\_\-path}
+\item 
+string \hyperlink{classOdroid_af59f177765cdc44dd1bca01f1d2e568c}{gpio\-Path}
+\item 
+int \hyperlink{classOdroid_a936074d84ad18c34e19ee1f1ea59fcbf}{gpio\-\_\-nb}
+\item 
+string \hyperlink{classOdroid_aa74658114a7f7d6d31dba4b7e7955674}{direction\-Path}
+\item 
+string \hyperlink{classOdroid_acb053e5e5f9060d7884abf6dd6c29358}{direction}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Description de la classe gérant les interactions entre la photodiode, le bouton et l'Odroid-\/\-C2. 
+
+Cette classe permet de contrôler des composantes branchées à l'Odroid-\/\-C2, dans ce cas-\/ci une photodiode et un bouton. Les informations incluses dans la classe permettent de détecter la lumière et contrôler et déterminer l'état d'un bouton. 
+
+Definition at line 29 of file odroid.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classOdroid_af78c1d11b6bc3e0a9b206e9f90787bf6}{\index{Odroid@{Odroid}!Odroid@{Odroid}}
+\index{Odroid@{Odroid}!Odroid@{Odroid}}
+\subsubsection[{Odroid}]{\setlength{\rightskip}{0pt plus 5cm}Odroid\-::\-Odroid (
+\begin{DoxyParamCaption}
+\item[{string}]{adc\-\_\-path = {\ttfamily \char`\"{}/sys/class/saradc/ch0\char`\"{}}, }
+\item[{string}]{button\-\_\-path = {\ttfamily \char`\"{}/sys/class/gpio/gpio228/value\char`\"{}}, }
+\item[{string}]{gpio\-Path = {\ttfamily \char`\"{}/sys/class/gpio/export\char`\"{}}, }
+\item[{string}]{direction\-Path = {\ttfamily \char`\"{}/sys/class/gpio/gpio228/{\bf direction}\char`\"{}}, }
+\item[{int}]{gpio\-\_\-nb = {\ttfamily 228}, }
+\item[{string}]{direction = {\ttfamily \char`\"{}in\char`\"{}}}
+\end{DoxyParamCaption}
+)}}\label{classOdroid_af78c1d11b6bc3e0a9b206e9f90787bf6}
+
+
+Constructeur de la classe \hyperlink{classOdroid}{Odroid}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em adc\-\_\-path} & Chemin du fichier de la valeur A\-D\-C. \\
+\hline
+{\em button\-\_\-path} & Chemin du fichier d'état du bouton. \\
+\hline
+{\em gpio\-Path} & Chemin du fichier G\-P\-I\-O. \\
+\hline
+{\em direction\-Path} & Chemin du fichier de direction G\-P\-I\-O. \\
+\hline
+{\em gpio\-\_\-nb} & Numéro G\-P\-I\-O associé au bouton. \\
+\hline
+{\em direction} & Direction du G\-P\-I\-O (entrée ou sortie). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 15 of file odroid.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classOdroid_aa2c13144f4a17627be568b53d8589c58}{\index{Odroid@{Odroid}!button\-\_\-pressed@{button\-\_\-pressed}}
+\index{button\-\_\-pressed@{button\-\_\-pressed}!Odroid@{Odroid}}
+\subsubsection[{button\-\_\-pressed}]{\setlength{\rightskip}{0pt plus 5cm}bool Odroid\-::button\-\_\-pressed (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classOdroid_aa2c13144f4a17627be568b53d8589c58}
+
+
+Vérifie si le bouton est pressé (état du bouton est 0). 
+
+\begin{DoxyReturn}{Returns}
+Vrai si le bouton est pressé, faux sinon. 
+\end{DoxyReturn}
+
+
+Definition at line 39 of file odroid.\-cpp.
+
+\hypertarget{classOdroid_a13964668cb1c0d36ffaaeca6a819a83e}{\index{Odroid@{Odroid}!no\-\_\-light@{no\-\_\-light}}
+\index{no\-\_\-light@{no\-\_\-light}!Odroid@{Odroid}}
+\subsubsection[{no\-\_\-light}]{\setlength{\rightskip}{0pt plus 5cm}bool Odroid\-::no\-\_\-light (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classOdroid_a13964668cb1c0d36ffaaeca6a819a83e}
+
+
+Definition at line 28 of file odroid.\-cpp.
+
+\hypertarget{classOdroid_afda2e858ec376bd9f0b29fdb7f0f9bb7}{\index{Odroid@{Odroid}!set\-\_\-button@{set\-\_\-button}}
+\index{set\-\_\-button@{set\-\_\-button}!Odroid@{Odroid}}
+\subsubsection[{set\-\_\-button}]{\setlength{\rightskip}{0pt plus 5cm}void Odroid\-::set\-\_\-button (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classOdroid_afda2e858ec376bd9f0b29fdb7f0f9bb7}
+
+
+Défini l'état du bouton. 
+
+
+
+Definition at line 49 of file odroid.\-cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{classOdroid_a93391450090b2f8676e261bb6f8ac961}{\index{Odroid@{Odroid}!adc\-\_\-path@{adc\-\_\-path}}
+\index{adc\-\_\-path@{adc\-\_\-path}!Odroid@{Odroid}}
+\subsubsection[{adc\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}string Odroid\-::adc\-\_\-path\hspace{0.3cm}{\ttfamily [private]}}}\label{classOdroid_a93391450090b2f8676e261bb6f8ac961}
+Chemin du fichier de la valeur A\-D\-C. 
+
+Definition at line 34 of file odroid.\-h.
+
+\hypertarget{classOdroid_aeb57a9bb759c9c45cd5fb5a90ea75a0a}{\index{Odroid@{Odroid}!adc\-\_\-value@{adc\-\_\-value}}
+\index{adc\-\_\-value@{adc\-\_\-value}!Odroid@{Odroid}}
+\subsubsection[{adc\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int Odroid\-::adc\-\_\-value\hspace{0.3cm}{\ttfamily [private]}}}\label{classOdroid_aeb57a9bb759c9c45cd5fb5a90ea75a0a}
+Valeur A\-D\-C lue à partir du chemin spécifié. 
+
+Definition at line 33 of file odroid.\-h.
+
+\hypertarget{classOdroid_af5c8c0acd24f1d38ae2181a4d659ecd8}{\index{Odroid@{Odroid}!button\-\_\-path@{button\-\_\-path}}
+\index{button\-\_\-path@{button\-\_\-path}!Odroid@{Odroid}}
+\subsubsection[{button\-\_\-path}]{\setlength{\rightskip}{0pt plus 5cm}string Odroid\-::button\-\_\-path\hspace{0.3cm}{\ttfamily [private]}}}\label{classOdroid_af5c8c0acd24f1d38ae2181a4d659ecd8}
+Chemin du fichier d'état du bouton. 
+
+Definition at line 36 of file odroid.\-h.
+
+\hypertarget{classOdroid_a9d14734cc57d1a962b7b214f84376727}{\index{Odroid@{Odroid}!button\-\_\-value@{button\-\_\-value}}
+\index{button\-\_\-value@{button\-\_\-value}!Odroid@{Odroid}}
+\subsubsection[{button\-\_\-value}]{\setlength{\rightskip}{0pt plus 5cm}int Odroid\-::button\-\_\-value\hspace{0.3cm}{\ttfamily [private]}}}\label{classOdroid_a9d14734cc57d1a962b7b214f84376727}
+État actuel du bouton (0 ou 1). 
+
+Definition at line 35 of file odroid.\-h.
+
+\hypertarget{classOdroid_acb053e5e5f9060d7884abf6dd6c29358}{\index{Odroid@{Odroid}!direction@{direction}}
+\index{direction@{direction}!Odroid@{Odroid}}
+\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}string Odroid\-::direction\hspace{0.3cm}{\ttfamily [private]}}}\label{classOdroid_acb053e5e5f9060d7884abf6dd6c29358}
+Direction du G\-P\-I\-O (entrée ou sortie). 
+
+Definition at line 40 of file odroid.\-h.
+
+\hypertarget{classOdroid_aa74658114a7f7d6d31dba4b7e7955674}{\index{Odroid@{Odroid}!direction\-Path@{direction\-Path}}
+\index{direction\-Path@{direction\-Path}!Odroid@{Odroid}}
+\subsubsection[{direction\-Path}]{\setlength{\rightskip}{0pt plus 5cm}string Odroid\-::direction\-Path\hspace{0.3cm}{\ttfamily [private]}}}\label{classOdroid_aa74658114a7f7d6d31dba4b7e7955674}
+Chemin du fichier de direction G\-P\-I\-O. 
+
+Definition at line 39 of file odroid.\-h.
+
+\hypertarget{classOdroid_a936074d84ad18c34e19ee1f1ea59fcbf}{\index{Odroid@{Odroid}!gpio\-\_\-nb@{gpio\-\_\-nb}}
+\index{gpio\-\_\-nb@{gpio\-\_\-nb}!Odroid@{Odroid}}
+\subsubsection[{gpio\-\_\-nb}]{\setlength{\rightskip}{0pt plus 5cm}int Odroid\-::gpio\-\_\-nb\hspace{0.3cm}{\ttfamily [private]}}}\label{classOdroid_a936074d84ad18c34e19ee1f1ea59fcbf}
+Numéro G\-P\-I\-O associé au bouton. 
+
+Definition at line 38 of file odroid.\-h.
+
+\hypertarget{classOdroid_af59f177765cdc44dd1bca01f1d2e568c}{\index{Odroid@{Odroid}!gpio\-Path@{gpio\-Path}}
+\index{gpio\-Path@{gpio\-Path}!Odroid@{Odroid}}
+\subsubsection[{gpio\-Path}]{\setlength{\rightskip}{0pt plus 5cm}string Odroid\-::gpio\-Path\hspace{0.3cm}{\ttfamily [private]}}}\label{classOdroid_af59f177765cdc44dd1bca01f1d2e568c}
+Chemin du fichier G\-P\-I\-O. 
+
+Definition at line 37 of file odroid.\-h.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+serveur/\hyperlink{odroid_8h}{odroid.\-h}\item 
+serveur/\hyperlink{odroid_8cpp}{odroid.\-cpp}\end{DoxyCompactItemize}

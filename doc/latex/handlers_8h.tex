@@ -1,0 +1,258 @@
+\hypertarget{handlers_8h}{\section{client/handlers.h File Reference}
+\label{handlers_8h}\index{client/handlers.\-h@{client/handlers.\-h}}
+}
+
+
+Déclarations et définitions des bibliotèques, fonctions et variables globales utilisées dans le dossier {\bfseries client} .  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$cstdio$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$unistd.\-h$>$}\\*
+{\ttfamily \#include $<$sys/types.\-h$>$}\\*
+{\ttfamily \#include $<$sys/socket.\-h$>$}\\*
+{\ttfamily \#include $<$netinet/in.\-h$>$}\\*
+{\ttfamily \#include $<$arpa/inet.\-h$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$dirent.\-h$>$}\\*
+{\ttfamily \#include $<$sys/stat.\-h$>$}\\*
+{\ttfamily \#include $<$opencv2/opencv.\-hpp$>$}\\*
+{\ttfamily \#include \char`\"{}../commun/video.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../commun/\-T\-C\-P.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../commun/message.\-h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}../commun/definitions.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Mat \hyperlink{handlers_8h_a0416ab006db810a44edc49b4d2d3b7c2}{Decompress\-Image} (vector$<$ uchar $>$ \&compressed\-Image\-Buffer)
+\begin{DoxyCompactList}\small\item\em Décompresse une image en utilisant le vecteur {\itshape compressed\-Image\-Buffer} comme tampon d'image compressée. \end{DoxyCompactList}\item 
+void \hyperlink{handlers_8h_aed604be5cf13734d58ad11d4bb3ee5ab}{Key\-Handling} (int \&sock, uint32\-\_\-t \&messages)
+\begin{DoxyCompactList}\small\item\em Gère les entrées des touches de clavier à l'aide d'un socket. \end{DoxyCompactList}\item 
+Mat \hyperlink{handlers_8h_aaf20c24b211acdce0de1f5c2b8d116a3}{receive\-\_\-image} (int \&sock)
+\begin{DoxyCompactList}\small\item\em Reçoit une image provenant d'un socket et renvoi l'image reçue dans un objet {\bfseries Mat} . \end{DoxyCompactList}\item 
+void \hyperlink{handlers_8h_aeb82d775f13fa1b554461a8a5b3242f9}{stream\-\_\-image} (int \&sock, uint32\-\_\-t \&messages)
+\begin{DoxyCompactList}\small\item\em Gère l'affichage de l'image provenant du socket sur le serveur. \end{DoxyCompactList}\item 
+void \hyperlink{handlers_8h_ae19b4c520dbd99a88d8a24ff5c78ab34}{save\-\_\-image} (int \&sock, int image\-\_\-\-I\-D)
+\begin{DoxyCompactList}\small\item\em Enregistre une image à partir du socket du serveur avec un identifiant. \end{DoxyCompactList}\item 
+void \hyperlink{handlers_8h_a6d10bb1e9e9487474c6ea38d137ede92}{handle\-\_\-odroid\-\_\-message} (int \&sock, uint32\-\_\-t \&messages, bool \&image\-\_\-down, bool \&push\-\_\-button)
+\begin{DoxyCompactList}\small\item\em Gère le message de l'\hyperlink{classOdroid}{Odroid} qui indique l'état du bouton et des données de l'image. \end{DoxyCompactList}\item 
+void \hyperlink{handlers_8h_a98b2cf160ea304acd1a188b3cbe07598}{show\-\_\-and\-\_\-save\-\_\-image} (int \&image\-\_\-\-I\-D, bool push\-\_\-button, int \&sock, uint32\-\_\-t \&messages, const string \&data\-\_\-base\-\_\-path)
+\begin{DoxyCompactList}\small\item\em Affiche et enregistre une image traitée avec une méthode de détection des visages. \end{DoxyCompactList}\item 
+void \hyperlink{handlers_8h_a5122ba5754e2534472aecd0047905585}{detect\-\_\-and\-\_\-save\-\_\-faces} (Mat \&image, int \&image\-\_\-\-I\-D, const string \&data\-\_\-base\-\_\-path)
+\begin{DoxyCompactList}\small\item\em Détecte et enregistre les visages sur l'image reçue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Déclarations et définitions des bibliotèques, fonctions et variables globales utilisées dans le dossier {\bfseries client} . Ce fichier contient les déclarations des variables globales des fichiers du dossier {\bfseries client} , la liste des bibliothèques et headers inclus dans les fichiers, la déclaration d'utilisation du namespace {\bfseries cv} et les déclarations des fonctions définies dans les fichiers du dossier {\bfseries client} . 
+
+Definition in file \hyperlink{handlers_8h_source}{handlers.\-h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{handlers_8h_a0416ab006db810a44edc49b4d2d3b7c2}{\index{handlers.\-h@{handlers.\-h}!Decompress\-Image@{Decompress\-Image}}
+\index{Decompress\-Image@{Decompress\-Image}!handlers.h@{handlers.\-h}}
+\subsubsection[{Decompress\-Image}]{\setlength{\rightskip}{0pt plus 5cm}Mat Decompress\-Image (
+\begin{DoxyParamCaption}
+\item[{vector$<$ uchar $>$ \&}]{compressed\-Image\-Buffer}
+\end{DoxyParamCaption}
+)}}\label{handlers_8h_a0416ab006db810a44edc49b4d2d3b7c2}
+
+
+Décompresse une image en utilisant le vecteur {\itshape compressed\-Image\-Buffer} comme tampon d'image compressée. 
+
+\hyperlink{handlers_8h_a0416ab006db810a44edc49b4d2d3b7c2}{Decompress\-Image(vector$<$uchar$>$ \&compressed\-Image\-Buffer)} 
+\begin{DoxyParams}{Parameters}
+{\em compressed\-Image\-Buffer} & Le tampon contenant les données de l'image compressée. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+L'objet Mat décompressé représentant l'image. 
+\end{DoxyReturn}
+
+
+Definition at line 50 of file handlers.\-cpp.
+
+\hypertarget{handlers_8h_a5122ba5754e2534472aecd0047905585}{\index{handlers.\-h@{handlers.\-h}!detect\-\_\-and\-\_\-save\-\_\-faces@{detect\-\_\-and\-\_\-save\-\_\-faces}}
+\index{detect\-\_\-and\-\_\-save\-\_\-faces@{detect\-\_\-and\-\_\-save\-\_\-faces}!handlers.h@{handlers.\-h}}
+\subsubsection[{detect\-\_\-and\-\_\-save\-\_\-faces}]{\setlength{\rightskip}{0pt plus 5cm}void detect\-\_\-and\-\_\-save\-\_\-faces (
+\begin{DoxyParamCaption}
+\item[{Mat \&}]{image, }
+\item[{int \&}]{image\-\_\-\-I\-D, }
+\item[{const string \&}]{data\-\_\-base\-\_\-path}
+\end{DoxyParamCaption}
+)}}\label{handlers_8h_a5122ba5754e2534472aecd0047905585}
+
+
+Détecte et enregistre les visages sur l'image reçue. 
+
+\hyperlink{handlers_8h_a5122ba5754e2534472aecd0047905585}{detect\-\_\-and\-\_\-save\-\_\-faces(\-Mat\& image, int \&image\-\_\-\-I\-D, const string \&data\-\_\-base\-\_\-path)} 
+\begin{DoxyParams}{Parameters}
+{\em image} & L'image à traiter. \\
+\hline
+{\em image\-\_\-\-I\-D} & L'identifiant de l'image. \\
+\hline
+{\em data\-\_\-base\-\_\-path} & Le sous-\/répertoire où les visages détectés sont enregistrés. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 235 of file handlers.\-cpp.
+
+\hypertarget{handlers_8h_a6d10bb1e9e9487474c6ea38d137ede92}{\index{handlers.\-h@{handlers.\-h}!handle\-\_\-odroid\-\_\-message@{handle\-\_\-odroid\-\_\-message}}
+\index{handle\-\_\-odroid\-\_\-message@{handle\-\_\-odroid\-\_\-message}!handlers.h@{handlers.\-h}}
+\subsubsection[{handle\-\_\-odroid\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}void handle\-\_\-odroid\-\_\-message (
+\begin{DoxyParamCaption}
+\item[{int \&}]{sock, }
+\item[{uint32\-\_\-t \&}]{messages, }
+\item[{bool \&}]{image\-\_\-down, }
+\item[{bool \&}]{push\-\_\-button}
+\end{DoxyParamCaption}
+)}}\label{handlers_8h_a6d10bb1e9e9487474c6ea38d137ede92}
+
+
+Gère le message de l'\hyperlink{classOdroid}{Odroid} qui indique l'état du bouton et des données de l'image. 
+
+\hyperlink{handlers_8h_a6d10bb1e9e9487474c6ea38d137ede92}{handle\-\_\-odroid\-\_\-message(int \&sock, uint32\-\_\-t \&messages, bool \&image\-\_\-down, bool \&push\-\_\-button)} 
+\begin{DoxyParams}{Parameters}
+{\em sock} & L'identifiant du socket. \\
+\hline
+{\em messages} & Les données du message. \\
+\hline
+{\em image\-\_\-down} & Indique si l'image est reçue. \\
+\hline
+{\em push\-\_\-button} & Indique si le bouton est enfoncé. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 181 of file handlers.\-cpp.
+
+\hypertarget{handlers_8h_aed604be5cf13734d58ad11d4bb3ee5ab}{\index{handlers.\-h@{handlers.\-h}!Key\-Handling@{Key\-Handling}}
+\index{Key\-Handling@{Key\-Handling}!handlers.h@{handlers.\-h}}
+\subsubsection[{Key\-Handling}]{\setlength{\rightskip}{0pt plus 5cm}void Key\-Handling (
+\begin{DoxyParamCaption}
+\item[{int \&}]{sock, }
+\item[{uint32\-\_\-t \&}]{messages}
+\end{DoxyParamCaption}
+)}}\label{handlers_8h_aed604be5cf13734d58ad11d4bb3ee5ab}
+
+
+Gère les entrées des touches de clavier à l'aide d'un socket. 
+
+\hyperlink{handlers_8h_aed604be5cf13734d58ad11d4bb3ee5ab}{Key\-Handling(int \&sock, uint32\-\_\-t \&messages)} 
+\begin{DoxyParams}{Parameters}
+{\em sock} & Identifiant du socket. \\
+\hline
+{\em messages} & Les données du message. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 69 of file handlers.\-cpp.
+
+\hypertarget{handlers_8h_aaf20c24b211acdce0de1f5c2b8d116a3}{\index{handlers.\-h@{handlers.\-h}!receive\-\_\-image@{receive\-\_\-image}}
+\index{receive\-\_\-image@{receive\-\_\-image}!handlers.h@{handlers.\-h}}
+\subsubsection[{receive\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}Mat receive\-\_\-image (
+\begin{DoxyParamCaption}
+\item[{int \&}]{sock}
+\end{DoxyParamCaption}
+)}}\label{handlers_8h_aaf20c24b211acdce0de1f5c2b8d116a3}
+
+
+Reçoit une image provenant d'un socket et renvoi l'image reçue dans un objet {\bfseries Mat} . 
+
+\hyperlink{handlers_8h_aaf20c24b211acdce0de1f5c2b8d116a3}{receive\-\_\-image(int \&sock)} 
+\begin{DoxyParams}{Parameters}
+{\em sock} & L'identifiant du socket. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+L'objet Mat représentant l'image reçue. 
+\end{DoxyReturn}
+
+
+Definition at line 125 of file handlers.\-cpp.
+
+\hypertarget{handlers_8h_ae19b4c520dbd99a88d8a24ff5c78ab34}{\index{handlers.\-h@{handlers.\-h}!save\-\_\-image@{save\-\_\-image}}
+\index{save\-\_\-image@{save\-\_\-image}!handlers.h@{handlers.\-h}}
+\subsubsection[{save\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}void save\-\_\-image (
+\begin{DoxyParamCaption}
+\item[{int \&}]{sock, }
+\item[{int}]{image\-\_\-\-I\-D}
+\end{DoxyParamCaption}
+)}}\label{handlers_8h_ae19b4c520dbd99a88d8a24ff5c78ab34}
+
+
+Enregistre une image à partir du socket du serveur avec un identifiant. 
+
+\hyperlink{handlers_8h_ae19b4c520dbd99a88d8a24ff5c78ab34}{save\-\_\-image(int \&sock,int image\-\_\-\-I\-D)} 
+\begin{DoxyParams}{Parameters}
+{\em sock} & L'identifiant du socket. \\
+\hline
+{\em image\-\_\-\-I\-D} & L'identifiant de l'image. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 165 of file handlers.\-cpp.
+
+\hypertarget{handlers_8h_a98b2cf160ea304acd1a188b3cbe07598}{\index{handlers.\-h@{handlers.\-h}!show\-\_\-and\-\_\-save\-\_\-image@{show\-\_\-and\-\_\-save\-\_\-image}}
+\index{show\-\_\-and\-\_\-save\-\_\-image@{show\-\_\-and\-\_\-save\-\_\-image}!handlers.h@{handlers.\-h}}
+\subsubsection[{show\-\_\-and\-\_\-save\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}void show\-\_\-and\-\_\-save\-\_\-image (
+\begin{DoxyParamCaption}
+\item[{int \&}]{image\-\_\-\-I\-D, }
+\item[{bool}]{push\-\_\-button, }
+\item[{int \&}]{sock, }
+\item[{uint32\-\_\-t \&}]{messages, }
+\item[{const string \&}]{data\-\_\-base\-\_\-path}
+\end{DoxyParamCaption}
+)}}\label{handlers_8h_a98b2cf160ea304acd1a188b3cbe07598}
+
+
+Affiche et enregistre une image traitée avec une méthode de détection des visages. 
+
+\hyperlink{handlers_8h_a98b2cf160ea304acd1a188b3cbe07598}{show\-\_\-and\-\_\-save\-\_\-image(int \&image\-\_\-\-I\-D, bool push\-\_\-button,int \&sock, uint32\-\_\-t \&messages, const string \&data\-\_\-base\-\_\-path)} 
+\begin{DoxyParams}{Parameters}
+{\em image\-\_\-\-I\-D} & L'identifiant de l'image. \\
+\hline
+{\em push\-\_\-button} & Indique si le bouton est enfoncé. \\
+\hline
+{\em sock} & L'identifiant du socket. \\
+\hline
+{\em messages} & Les données du message. \\
+\hline
+{\em data\-\_\-base\-\_\-path} & Le sous-\/répertoire où l'image est enregistrée. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 208 of file handlers.\-cpp.
+
+\hypertarget{handlers_8h_aeb82d775f13fa1b554461a8a5b3242f9}{\index{handlers.\-h@{handlers.\-h}!stream\-\_\-image@{stream\-\_\-image}}
+\index{stream\-\_\-image@{stream\-\_\-image}!handlers.h@{handlers.\-h}}
+\subsubsection[{stream\-\_\-image}]{\setlength{\rightskip}{0pt plus 5cm}void stream\-\_\-image (
+\begin{DoxyParamCaption}
+\item[{int \&}]{sock, }
+\item[{uint32\-\_\-t \&}]{messages}
+\end{DoxyParamCaption}
+)}}\label{handlers_8h_aeb82d775f13fa1b554461a8a5b3242f9}
+
+
+Gère l'affichage de l'image provenant du socket sur le serveur. 
+
+\hyperlink{handlers_8h_aeb82d775f13fa1b554461a8a5b3242f9}{stream\-\_\-image(int \&sock,uint32\-\_\-t \&messages)} 
+\begin{DoxyParams}{Parameters}
+{\em sock} & L'identifiant du socket. \\
+\hline
+{\em messages} & Les données du message. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 150 of file handlers.\-cpp.
+

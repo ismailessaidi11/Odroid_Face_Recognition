@@ -1,0 +1,115 @@
+\hypertarget{serverHandlers_8cpp}{\section{serveur/server\-Handlers.cpp File Reference}
+\label{serverHandlers_8cpp}\index{serveur/server\-Handlers.\-cpp@{serveur/server\-Handlers.\-cpp}}
+}
+
+
+Fichier décrivant les fonctions utilisées par le serveur lors de l'utilisation de l'application.  
+
+
+{\ttfamily \#include \char`\"{}server\-Handlers.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{serverHandlers_8cpp_a151c3dadd3c35a6805a5ef067e68a7f6}{Handle\-Client} (int \&clnt\-Socket, uint32\-\_\-t \&messages, \hyperlink{classVideo}{Video} \&video, string \&format)
+\begin{DoxyCompactList}\small\item\em Fonction permettant au serveur de gérer les demandes du client. Le serveur peut ainsi capturer une image, la compresser, l'envoyer au client et, si nécessaire, modifier les paramètres de la caméra en fonction de la demande du client. \end{DoxyCompactList}\item 
+void \hyperlink{serverHandlers_8cpp_a95922d1adcae1b22b9573e438cd9aa01}{update\-\_\-camera} (uint32\-\_\-t \&messages, \hyperlink{classVideo}{Video} \&video, string \&format)
+\begin{DoxyCompactList}\small\item\em Reçoit les messages du client et met à jour les paramètres de la caméra en fonction des demandes du client. \end{DoxyCompactList}\item 
+void \hyperlink{serverHandlers_8cpp_a73cf5b38cb3b86a48c21e45606ecdc00}{Read\-\_\-and\-\_\-update\-\_\-message} (uint32\-\_\-t \&messages, \hyperlink{classOdroid}{Odroid} odroid, int \&clnt\-Sock, bool \&image\-\_\-down, bool \&button\-\_\-was\-\_\-pressed)
+\begin{DoxyCompactList}\small\item\em Le serveur lit les données reçues concernant la lumière et lebouton reliés à l'Odroid-\/\-C2 et il met à jour les messages qu'il envoie ensuite au client. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fichier décrivant les fonctions utilisées par le serveur lors de l'utilisation de l'application. Ce fichier contient les définitions des fonctions de contrôle de la caméra, de la capture d'images et de leur traitement avant leur envoi vers le client. Les fonctions de réception des demandes du client sont également définies dans ce fichier. 
+
+Definition in file \hyperlink{serverHandlers_8cpp_source}{server\-Handlers.\-cpp}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{serverHandlers_8cpp_a151c3dadd3c35a6805a5ef067e68a7f6}{\index{server\-Handlers.\-cpp@{server\-Handlers.\-cpp}!Handle\-Client@{Handle\-Client}}
+\index{Handle\-Client@{Handle\-Client}!serverHandlers.cpp@{server\-Handlers.\-cpp}}
+\subsubsection[{Handle\-Client}]{\setlength{\rightskip}{0pt plus 5cm}void Handle\-Client (
+\begin{DoxyParamCaption}
+\item[{int \&}]{clnt\-Socket, }
+\item[{uint32\-\_\-t \&}]{messages, }
+\item[{{\bf Video} \&}]{video, }
+\item[{string \&}]{format}
+\end{DoxyParamCaption}
+)}}\label{serverHandlers_8cpp_a151c3dadd3c35a6805a5ef067e68a7f6}
+
+
+Fonction permettant au serveur de gérer les demandes du client. Le serveur peut ainsi capturer une image, la compresser, l'envoyer au client et, si nécessaire, modifier les paramètres de la caméra en fonction de la demande du client. 
+
+\hyperlink{serverHandlers_8h_a151c3dadd3c35a6805a5ef067e68a7f6}{Handle\-Client(int \&clnt\-Socket, uint32\-\_\-t \&messages, Video \&video,string \&format)} 
+\begin{DoxyParams}{Parameters}
+{\em clnt\-Socket} & Le socket du client. \\
+\hline
+{\em messages} & Les données de message. \\
+\hline
+{\em video} & L'objet \hyperlink{classVideo}{Video} utilisé pour capturer les images. \\
+\hline
+{\em format} & Le format d'image utilisé pour la compression. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 26 of file server\-Handlers.\-cpp.
+
+\hypertarget{serverHandlers_8cpp_a73cf5b38cb3b86a48c21e45606ecdc00}{\index{server\-Handlers.\-cpp@{server\-Handlers.\-cpp}!Read\-\_\-and\-\_\-update\-\_\-message@{Read\-\_\-and\-\_\-update\-\_\-message}}
+\index{Read\-\_\-and\-\_\-update\-\_\-message@{Read\-\_\-and\-\_\-update\-\_\-message}!serverHandlers.cpp@{server\-Handlers.\-cpp}}
+\subsubsection[{Read\-\_\-and\-\_\-update\-\_\-message}]{\setlength{\rightskip}{0pt plus 5cm}void Read\-\_\-and\-\_\-update\-\_\-message (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t \&}]{messages, }
+\item[{{\bf Odroid}}]{odroid, }
+\item[{int \&}]{clnt\-Sock, }
+\item[{bool \&}]{image\-\_\-down, }
+\item[{bool \&}]{button\-\_\-was\-\_\-pressed}
+\end{DoxyParamCaption}
+)}}\label{serverHandlers_8cpp_a73cf5b38cb3b86a48c21e45606ecdc00}
+
+
+Le serveur lit les données reçues concernant la lumière et lebouton reliés à l'Odroid-\/\-C2 et il met à jour les messages qu'il envoie ensuite au client. 
+
+\hyperlink{serverHandlers_8h_a73cf5b38cb3b86a48c21e45606ecdc00}{Read\-\_\-and\-\_\-update\-\_\-message(uint32\-\_\-t \&messages, Odroid odroid, int \&clnt\-Sock, bool \&image\-\_\-down, bool \&button\-\_\-was\-\_\-pressed)} 
+\begin{DoxyParams}{Parameters}
+{\em messages} & Les données du message. \\
+\hline
+{\em odroid} & L'objet \hyperlink{classOdroid}{Odroid} pour la lecture des informations. \\
+\hline
+{\em clnt\-Sock} & Le socket du client. \\
+\hline
+{\em image\-\_\-down} & Indique si une image a été reçue. \\
+\hline
+{\em button\-\_\-was\-\_\-pressed} & Indique si le bouton a été enfoncé. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 108 of file server\-Handlers.\-cpp.
+
+\hypertarget{serverHandlers_8cpp_a95922d1adcae1b22b9573e438cd9aa01}{\index{server\-Handlers.\-cpp@{server\-Handlers.\-cpp}!update\-\_\-camera@{update\-\_\-camera}}
+\index{update\-\_\-camera@{update\-\_\-camera}!serverHandlers.cpp@{server\-Handlers.\-cpp}}
+\subsubsection[{update\-\_\-camera}]{\setlength{\rightskip}{0pt plus 5cm}void update\-\_\-camera (
+\begin{DoxyParamCaption}
+\item[{uint32\-\_\-t \&}]{messages, }
+\item[{{\bf Video} \&}]{video, }
+\item[{string \&}]{format}
+\end{DoxyParamCaption}
+)}}\label{serverHandlers_8cpp_a95922d1adcae1b22b9573e438cd9aa01}
+
+
+Reçoit les messages du client et met à jour les paramètres de la caméra en fonction des demandes du client. 
+
+\hyperlink{serverHandlers_8h_a95922d1adcae1b22b9573e438cd9aa01}{update\-\_\-camera(uint32\-\_\-t \&messages, Video \&video, string \&format)} 
+\begin{DoxyParams}{Parameters}
+{\em messages} & Les données de message. \\
+\hline
+{\em video} & L'objet \hyperlink{classVideo}{Video} utilisé pour les mises à jour de la caméra. \\
+\hline
+{\em format} & Le format d'image à mettre à jour. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 63 of file server\-Handlers.\-cpp.
+

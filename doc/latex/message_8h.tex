@@ -1,0 +1,72 @@
+\hypertarget{message_8h}{\section{commun/message.h File Reference}
+\label{message_8h}\index{commun/message.\-h@{commun/message.\-h}}
+}
+
+
+Déclaration des fonctions de messages d'arrêts de la communication client-\/serveur.  
+
+
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{message_8h_a65a087ece6f2fc9c17432032705dbf91}{Die\-With\-User\-Message} (const std\-::string \&message, const std\-::string \&detail)
+\begin{DoxyCompactList}\small\item\em La fonction affiche un message d'erreur détaillé destiné à l'utilisateur lors de son utilisation. L'affichage se fait via la sortie d'erreur standard (cerr). La fonction quitte ensuite le programme. \end{DoxyCompactList}\item 
+void \hyperlink{message_8h_ac20902c2bb67787becef945239c6f839}{Die\-With\-System\-Message} (const std\-::string \&message)
+\begin{DoxyCompactList}\small\item\em La fonction affiche un message d'erreur système sur la sortie standard (cout) et quitte ensuite le programme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Déclaration des fonctions de messages d'arrêts de la communication client-\/serveur. Ce fichier contient les bibliothèques utilisées et les déclarations des fonctions envoyant les messages indiquant que la communication n'est pas active entre le serveur et le client. 
+
+Definition in file \hyperlink{message_8h_source}{message.\-h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{message_8h_ac20902c2bb67787becef945239c6f839}{\index{message.\-h@{message.\-h}!Die\-With\-System\-Message@{Die\-With\-System\-Message}}
+\index{Die\-With\-System\-Message@{Die\-With\-System\-Message}!message.h@{message.\-h}}
+\subsubsection[{Die\-With\-System\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Die\-With\-System\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message}
+\end{DoxyParamCaption}
+)}}\label{message_8h_ac20902c2bb67787becef945239c6f839}
+
+
+La fonction affiche un message d'erreur système sur la sortie standard (cout) et quitte ensuite le programme. 
+
+\hyperlink{message_8h_ac20902c2bb67787becef945239c6f839}{Die\-With\-System\-Message(const std\-::string \&message)} 
+\begin{DoxyParams}{Parameters}
+{\em message} & Le message d'erreur système à afficher. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 36 of file message.\-cpp.
+
+\hypertarget{message_8h_a65a087ece6f2fc9c17432032705dbf91}{\index{message.\-h@{message.\-h}!Die\-With\-User\-Message@{Die\-With\-User\-Message}}
+\index{Die\-With\-User\-Message@{Die\-With\-User\-Message}!message.h@{message.\-h}}
+\subsubsection[{Die\-With\-User\-Message}]{\setlength{\rightskip}{0pt plus 5cm}void Die\-With\-User\-Message (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{message, }
+\item[{const std\-::string \&}]{detail}
+\end{DoxyParamCaption}
+)}}\label{message_8h_a65a087ece6f2fc9c17432032705dbf91}
+
+
+La fonction affiche un message d'erreur détaillé destiné à l'utilisateur lors de son utilisation. L'affichage se fait via la sortie d'erreur standard (cerr). La fonction quitte ensuite le programme. 
+
+\hyperlink{message_8h_a65a087ece6f2fc9c17432032705dbf91}{Die\-With\-User\-Message(const std\-::string \&message, const std\-::string \&detail)} 
+\begin{DoxyParams}{Parameters}
+{\em message} & Le message d'erreur principal à afficher. \\
+\hline
+{\em detail} & Les détails supplémentaires pour détailler l'erreur. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 23 of file message.\-cpp.
+

@@ -1,0 +1,56 @@
+\hypertarget{video_8h}{\section{commun/video.h File Reference}
+\label{video_8h}\index{commun/video.\-h@{commun/video.\-h}}
+}
+
+
+Définition de la classe et la structure comprenant les paramètres vidéo de la caméra.  
+
+
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$opencv2/opencv.\-hpp$>$}\\*
+{\ttfamily \#include $<$time.\-h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$netinet/in.\-h$>$}\\*
+{\ttfamily \#include $<$arpa/inet.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structResolution}{Resolution}
+\begin{DoxyCompactList}\small\item\em Définition des paramètres de résolution. \end{DoxyCompactList}\item 
+class \hyperlink{classVideo}{Video}
+\begin{DoxyCompactList}\small\item\em Classe gérant les paramètres de la caméra. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{video_8h_ae6eea8f766bae11c6a39cbadc4066de8}{init\-Fps} (\hyperlink{classVideo}{Video} video)
+\begin{DoxyCompactList}\small\item\em Initialise les F\-P\-S pour chaque résolution. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Définition de la classe et la structure comprenant les paramètres vidéo de la caméra. Ce fichier contient la définition de la classe {\bfseries \hyperlink{classVideo}{Video}}. Cette dernière contient les informations permettant au serveur de se connecter à la caméra. Le serveur peut également indiquer la résolution choisie par l'utilisateur et faire une capture d'image. 
+
+Definition in file \hyperlink{video_8h_source}{video.\-h}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{video_8h_ae6eea8f766bae11c6a39cbadc4066de8}{\index{video.\-h@{video.\-h}!init\-Fps@{init\-Fps}}
+\index{init\-Fps@{init\-Fps}!video.h@{video.\-h}}
+\subsubsection[{init\-Fps}]{\setlength{\rightskip}{0pt plus 5cm}void init\-Fps (
+\begin{DoxyParamCaption}
+\item[{{\bf Video}}]{video}
+\end{DoxyParamCaption}
+)}}\label{video_8h_ae6eea8f766bae11c6a39cbadc4066de8}
+
+
+Initialise les F\-P\-S pour chaque résolution. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em video} & Objet de capture vidéo. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 107 of file video.\-cpp.
+

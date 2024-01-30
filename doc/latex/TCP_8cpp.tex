@@ -1,0 +1,169 @@
+\hypertarget{TCP_8cpp}{\section{commun/\-T\-C\-P.cpp File Reference}
+\label{TCP_8cpp}\index{commun/\-T\-C\-P.\-cpp@{commun/\-T\-C\-P.\-cpp}}
+}
+
+
+Fonctions créant la structure de la connection T\-C\-P utilisée entre le serveur et le client.  
+
+
+{\ttfamily \#include \char`\"{}T\-C\-P.\-h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{TCP_8cpp_aa79e4d20d3cbc7ad1b082a172d6460c1}{Create\-Socket} ()
+\begin{DoxyCompactList}\small\item\em Crée un socket pour les connexions entrantes. \end{DoxyCompactList}\item 
+struct \hyperlink{structsockaddr__in}{sockaddr\-\_\-in} \hyperlink{TCP_8cpp_ae5df57afdd0c43294ae69d8134608b3a}{Construct\-Serv\-Addr} (in\-\_\-port\-\_\-t serv\-Port, bool server, const char $\ast$serv\-I\-P)
+\item 
+void \hyperlink{TCP_8cpp_a6b3491049556a6a68cc1b3fab1a90b97}{Bind\-And\-Listen} (int \&serv\-Sock, struct \hyperlink{structsockaddr__in}{sockaddr\-\_\-in} serv\-Addr, const int M\-A\-X\-P\-E\-N\-D\-I\-N\-G)
+\begin{DoxyCompactList}\small\item\em Lit et écoute sur le socket. \end{DoxyCompactList}\item 
+int \hyperlink{TCP_8cpp_a2d924fef51ef3d205880621191bdc21a}{get\-\_\-clnt\-Sock} (int \&serv\-Sock)
+\begin{DoxyCompactList}\small\item\em Accepte une connexion et récupère le descripteur de socket du client. \end{DoxyCompactList}\item 
+void \hyperlink{TCP_8cpp_a7710b9a814d78be4b43246285349a8f5}{Connect\-To\-Server} (int \&sock, struct \hyperlink{structsockaddr__in}{sockaddr\-\_\-in} serv\-Addr)
+\begin{DoxyCompactList}\small\item\em Établit une connexion avec un serveur distant. \end{DoxyCompactList}\item 
+ssize\-\_\-t \hyperlink{TCP_8cpp_a403d9fb903aec62df8d9ae99c24cfc5c}{safe\-Recv} (int \&sock, void $\ast$buffer, size\-\_\-t size, int flags)
+\begin{DoxyCompactList}\small\item\em Reçoit des données du socket de manière sécurisée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Fonctions créant la structure de la connection T\-C\-P utilisée entre le serveur et le client. Les fonctions de ce fichier établissent les paramètres de connection T\-C\-P-\/\-I\-P entre le serveur et le client. La connection est initiée après un appel du client au serveur. Ce dernier, qui était en attente, reçoit l'appel du client, établissant la connection. 
+
+Definition in file \hyperlink{TCP_8cpp_source}{T\-C\-P.\-cpp}.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{TCP_8cpp_a6b3491049556a6a68cc1b3fab1a90b97}{\index{T\-C\-P.\-cpp@{T\-C\-P.\-cpp}!Bind\-And\-Listen@{Bind\-And\-Listen}}
+\index{Bind\-And\-Listen@{Bind\-And\-Listen}!TCP.cpp@{T\-C\-P.\-cpp}}
+\subsubsection[{Bind\-And\-Listen}]{\setlength{\rightskip}{0pt plus 5cm}void Bind\-And\-Listen (
+\begin{DoxyParamCaption}
+\item[{int \&}]{serv\-Sock, }
+\item[{struct {\bf sockaddr\-\_\-in}}]{serv\-Addr, }
+\item[{const int}]{M\-A\-X\-P\-E\-N\-D\-I\-N\-G}
+\end{DoxyParamCaption}
+)}}\label{TCP_8cpp_a6b3491049556a6a68cc1b3fab1a90b97}
+
+
+Lit et écoute sur le socket. 
+
+Bind\-And\-Listen 
+\begin{DoxyParams}{Parameters}
+{\em serv\-Sock} & Descripteur de socket du serveur. \\
+\hline
+{\em serv\-Addr} & Structure d'adresse à lier. \\
+\hline
+{\em M\-A\-X\-P\-E\-N\-D\-I\-N\-G} & Nombre maximum de connexions en attente. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 66 of file T\-C\-P.\-cpp.
+
+\hypertarget{TCP_8cpp_a7710b9a814d78be4b43246285349a8f5}{\index{T\-C\-P.\-cpp@{T\-C\-P.\-cpp}!Connect\-To\-Server@{Connect\-To\-Server}}
+\index{Connect\-To\-Server@{Connect\-To\-Server}!TCP.cpp@{T\-C\-P.\-cpp}}
+\subsubsection[{Connect\-To\-Server}]{\setlength{\rightskip}{0pt plus 5cm}void Connect\-To\-Server (
+\begin{DoxyParamCaption}
+\item[{int \&}]{sock, }
+\item[{struct {\bf sockaddr\-\_\-in}}]{serv\-Addr}
+\end{DoxyParamCaption}
+)}}\label{TCP_8cpp_a7710b9a814d78be4b43246285349a8f5}
+
+
+Établit une connexion avec un serveur distant. 
+
+Connect\-To\-Server 
+\begin{DoxyParams}{Parameters}
+{\em sock} & Descripteur de socket du client. \\
+\hline
+{\em serv\-Addr} & Structure d'adresse du serveur. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 112 of file T\-C\-P.\-cpp.
+
+\hypertarget{TCP_8cpp_ae5df57afdd0c43294ae69d8134608b3a}{\index{T\-C\-P.\-cpp@{T\-C\-P.\-cpp}!Construct\-Serv\-Addr@{Construct\-Serv\-Addr}}
+\index{Construct\-Serv\-Addr@{Construct\-Serv\-Addr}!TCP.cpp@{T\-C\-P.\-cpp}}
+\subsubsection[{Construct\-Serv\-Addr}]{\setlength{\rightskip}{0pt plus 5cm}struct {\bf sockaddr\-\_\-in} Construct\-Serv\-Addr (
+\begin{DoxyParamCaption}
+\item[{in\-\_\-port\-\_\-t}]{serv\-Port, }
+\item[{bool}]{server, }
+\item[{const char $\ast$}]{serv\-I\-P}
+\end{DoxyParamCaption}
+)}}\label{TCP_8cpp_ae5df57afdd0c43294ae69d8134608b3a}
+
+
+Definition at line 37 of file T\-C\-P.\-cpp.
+
+\hypertarget{TCP_8cpp_aa79e4d20d3cbc7ad1b082a172d6460c1}{\index{T\-C\-P.\-cpp@{T\-C\-P.\-cpp}!Create\-Socket@{Create\-Socket}}
+\index{Create\-Socket@{Create\-Socket}!TCP.cpp@{T\-C\-P.\-cpp}}
+\subsubsection[{Create\-Socket}]{\setlength{\rightskip}{0pt plus 5cm}int Create\-Socket (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{TCP_8cpp_aa79e4d20d3cbc7ad1b082a172d6460c1}
+
+
+Crée un socket pour les connexions entrantes. 
+
+Create\-Socket \begin{DoxyReturn}{Returns}
+Le descripteur de socket pour le serveur. 
+\end{DoxyReturn}
+
+
+Definition at line 19 of file T\-C\-P.\-cpp.
+
+\hypertarget{TCP_8cpp_a2d924fef51ef3d205880621191bdc21a}{\index{T\-C\-P.\-cpp@{T\-C\-P.\-cpp}!get\-\_\-clnt\-Sock@{get\-\_\-clnt\-Sock}}
+\index{get\-\_\-clnt\-Sock@{get\-\_\-clnt\-Sock}!TCP.cpp@{T\-C\-P.\-cpp}}
+\subsubsection[{get\-\_\-clnt\-Sock}]{\setlength{\rightskip}{0pt plus 5cm}int get\-\_\-clnt\-Sock (
+\begin{DoxyParamCaption}
+\item[{int \&}]{serv\-Sock}
+\end{DoxyParamCaption}
+)}}\label{TCP_8cpp_a2d924fef51ef3d205880621191bdc21a}
+
+
+Accepte une connexion et récupère le descripteur de socket du client. 
+
+get\-\_\-clnt\-Sock 
+\begin{DoxyParams}{Parameters}
+{\em serv\-Sock} & Descripteur de socket du serveur. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le descripteur de socket du client accepté. 
+\end{DoxyReturn}
+
+
+Definition at line 86 of file T\-C\-P.\-cpp.
+
+\hypertarget{TCP_8cpp_a403d9fb903aec62df8d9ae99c24cfc5c}{\index{T\-C\-P.\-cpp@{T\-C\-P.\-cpp}!safe\-Recv@{safe\-Recv}}
+\index{safe\-Recv@{safe\-Recv}!TCP.cpp@{T\-C\-P.\-cpp}}
+\subsubsection[{safe\-Recv}]{\setlength{\rightskip}{0pt plus 5cm}ssize\-\_\-t safe\-Recv (
+\begin{DoxyParamCaption}
+\item[{int \&}]{sock, }
+\item[{void $\ast$}]{buffer, }
+\item[{size\-\_\-t}]{size, }
+\item[{int}]{flags}
+\end{DoxyParamCaption}
+)}}\label{TCP_8cpp_a403d9fb903aec62df8d9ae99c24cfc5c}
+
+
+Reçoit des données du socket de manière sécurisée. 
+
+safe\-Recv 
+\begin{DoxyParams}{Parameters}
+{\em sock} & Descripteur de socket. \\
+\hline
+{\em buffer} & Pointeur vers le tampon de réception. \\
+\hline
+{\em size} & Taille du tampon de réception. \\
+\hline
+{\em flags} & Drapeaux pour la fonction recv. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Le nombre d'octets reçus. 
+\end{DoxyReturn}
+
+
+Definition at line 129 of file T\-C\-P.\-cpp.
+

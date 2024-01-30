@@ -25,21 +25,21 @@ haarcascade_frontalface_default.xml
 Sur le terminal du serveur:
 
 ```
-serveur % bash
-serveur $ sudo /users/Cours/ele4205/commun/scripts/ifconfig-enp0s-up
-serveur $ source /usr/local/opt/poky/2.1.3/environment-setup-aarch64-poky-linux
-serveur $ cd build
-serveur/build $ cmake ..
-serveur/build $ make
-serveur $ code --extensions-dir /export/tmp/${USER}/vscode-ext .
+bash
+sudo /users/Cours/ele4205/commun/scripts/ifconfig-enp0s-up
+source /usr/local/opt/poky/2.1.3/environment-setup-aarch64-poky-linux
+cd build
+cmake ..
+make
+code --extensions-dir /export/tmp/${USER}/vscode-ext .
 ```
 
 Sur le terminal du client:
 ```
-client % cd build
-client/build % cmake ..
-client/build % make
-client % code --extensions-dir /export/tmp/${USER}/vscode-ext .
+cd build
+cmake ..
+make
+code --extensions-dir /export/tmp/${USER}/vscode-ext .
 ```
 ## Lancement
 Il suffit de lancer un run without debug (f5) dans le vscode du serveur d'abord puis lancer un autre run without debug (f5) dans le client.
